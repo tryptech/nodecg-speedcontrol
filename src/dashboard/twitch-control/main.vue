@@ -356,6 +356,17 @@ export default class extends Vue {
   }
 
   mounted(): void {
+    if (!this.config.enabled) {
+      try {
+        const panel = window.frameElement?.closest('ncg-dashboard-panel') || window.frameElement?.parentElement;
+        if (panel) panel.remove();
+        else document.body.innerHTML = '';
+      } catch (err) {
+        document.body.innerHTML = '';
+      }
+      return;
+    }
+
     if (window.frameElement?.parentElement) {
       window.frameElement.parentElement.setAttribute(
         'display-title',
