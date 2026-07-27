@@ -168,12 +168,6 @@
         "workspace": "Scene Editing"
       },
       {
-        "name": "relay-control",
-        "title": "Relay Control",
-        "file": "relay-control.html",
-        "width": 2
-      },
-      {
         "name": "run-modification-dialog",
         "title": "",
         "width": 6,
